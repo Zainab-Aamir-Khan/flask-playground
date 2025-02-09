@@ -28,6 +28,12 @@ def about():
     db.session.commit()
     return render_template("index.html")
 
+@app.route("/show")
+def show():
+    allTodo = Todo.query.all()
+    print(allTodo)
+    return "this is a show page"
+
 @app.route("/products")
 def products():
     return "this is a product's page"
