@@ -7,11 +7,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] =  "sqlite:///todo.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] =  False
 db = SQLAlchemy(app)
 
-class todo(db.Model):
+class Todo(db.Model):
     id = db.Column(db.Integer, primary_key= True)
     title = db.Column(db.String(200), nullable = False)
     description = db.Column(db.String(500), nullable= False)
-    date_created = db.Column(db.DateTime, default = datetime.now)
+    date_created = db.Column(db.DateTime, default = datetime.utcnow)
 
     def __repr__(self) -> str:
         return f"{self.id} - {self.title}"
@@ -23,8 +23,8 @@ def hello_world():
 
 @app.route("/about")
 def about():
-    Todo = todo(title = 'First todo', description = "Invest in Python company")
-    db.session.add(todo)
+    new_todo = Todo(title = 'First todo', description = "Invest in Python company")
+    db.session.add(new_todo)
     db.session.commit()
     return render_template("index.html")
 
