@@ -11,8 +11,10 @@ class todo(db.model):
     id = db.Column(db.integer, primary_key= True)
     title = db.Column(db.String(200), nullable = False)
     description = db.Column(db.String(500), nullable= False)
-    date_created = db.Column(db.DateTime, default = datetime.utcnow)
+    date_created = db.Column(db.DateTime, default = datetime.Now)
 
+    def __repr__(self) -> str:
+        return f"{self.id} - {self.title}"
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
