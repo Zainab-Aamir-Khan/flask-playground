@@ -32,7 +32,7 @@ def about():
 def show():
     allTodo = Todo.query.all()
     print(allTodo)
-    return "this is a show page"
+    return "this is a showpiece page"
 
 @app.route("/products")
 def products():
