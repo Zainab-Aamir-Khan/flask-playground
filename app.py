@@ -12,7 +12,7 @@ def about():
 
 @app.route("/products")
 def products():
-    return "this is a product page"
+    return "this is a product's page"
 
 
 if __name__ == "__main__":
