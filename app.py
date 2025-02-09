@@ -23,6 +23,9 @@ def hello_world():
 
 @app.route("/about")
 def about():
+    Todo = todo(title = 'First todo', description = "Invest in Python company")
+    db.session.add(todo)
+    db.session.commit()
     return render_template("index.html")
 
 @app.route("/products")
