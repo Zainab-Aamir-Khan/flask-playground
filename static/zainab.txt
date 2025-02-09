@@ -1,0 +1,1 @@
+this is a static file. this is used to render the files
