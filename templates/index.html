@@ -80,6 +80,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Date_Created</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,6 +90,7 @@
                     <td>{{todo.title}}</td>
                     <td>{{todo.description}}</td>
                     <td>{{todo.date_created}}</td>
+                    <td><button type="button" class="btn btn-success">Success</button>{{todo.id}}</td>
                 </tr>
                 {% endfor %}
 
