@@ -21,9 +21,9 @@ class Todo(db.Model):
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route("/about", methods =['GET', 'POST'])
+@app.route("/about", methods =["GET", "POST"])
 def about():
-    if request.method == 'POST':
+    if request.method == "POST":
         print(request.form['title'])
     new_todo = Todo(title = 'First todo', description = "Invest in Python company")
     db.session.add(new_todo)
