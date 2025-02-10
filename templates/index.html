@@ -82,13 +82,12 @@
             <tbody>
                 {% for todo in allTodo %}
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{todo.id}}</th>
                     <td>{{todo.title}}</td>
                     <td>{{todo.description}}</td>
                     <td>{{todo.date_created}}</td>
                 </tr>
                 {% endfor %}
-
 
             </tbody>
         </table>
