@@ -90,7 +90,9 @@
                     <td>{{todo.title}}</td>
                     <td>{{todo.description}}</td>
                     <td>{{todo.date_created}}</td>
-                    <td><button type="button" class="btn btn-success">Success</button>{{todo.id}}</td>
+                    <td><a href="/done/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-1">Done</button></td>
+                    <td><a href="/done/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-2">Update</button></td>
+
                 </tr>
                 {% endfor %}
 
