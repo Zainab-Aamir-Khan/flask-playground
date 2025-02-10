@@ -26,7 +26,7 @@ def about():
     if request.method == "POST":
         title = request.form['title']
         description = request.form['description']
-        new_todo = Todo(title = 'First todo', description = "Invest in Python company")
+        new_todo = Todo(title = title, description = description)
         db.session.add(new_todo)
         db.session.commit()
     allTodo = Todo.query.all()

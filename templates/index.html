@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Todo List</a>
+            <a class="navbar-brand" href="/about">Todo List</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -58,17 +58,17 @@
 
     <div class="container-fluid">
         <h1>Add a Todo</h1>
-        <form action="/about" method = POST>
-        <div class="mb-3">
-            <label for="title" class="form-label">Todo Title</label>
-            <input type="text" class="form-control" name="title" id="title">
-        </div>
-        <div class="mb-3">
-            <label for="desc" class="form-label">Todo Description</label>
-            <textarea class="form-control" name="description" id="desc" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <form action="/about" method=POST>
+            <div class="mb-3">
+                <label for="title" class="form-label">Todo Title</label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Todo Description</label>
+                <textarea class="form-control" name="description" id="desc" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <div class="container my-4">
