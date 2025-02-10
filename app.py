@@ -26,6 +26,8 @@ def about():
     new_todo = Todo(title = 'First todo', description = "Invest in Python company")
     db.session.add(new_todo)
     db.session.commit()
+    allTodo = Todo.query.all()
+    print(allTodo)
     return render_template("index.html")
 
 @app.route("/show")
