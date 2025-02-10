@@ -17,7 +17,7 @@ class Todo(db.Model):
         return f"{self.id} - {self.title}"
     
 
-@app.route("/")
+@app.route("/") 
 def hello_world():
     return "<p>Hello, World!</p>"
 
