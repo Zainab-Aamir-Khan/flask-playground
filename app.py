@@ -28,7 +28,7 @@ def about():
     db.session.commit()
     allTodo = Todo.query.all()
     print(allTodo)
-    return render_template("index.html")
+    return render_template("index.html", allTodo = allTodo)
 
 @app.route("/show")
 def show():
