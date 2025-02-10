@@ -24,10 +24,11 @@ def hello_world():
 @app.route("/about", methods =["GET", "POST"])
 def about():
     if request.method == "POST":
-        print(request.form['title'])
-    new_todo = Todo(title = 'First todo', description = "Invest in Python company")
-    db.session.add(new_todo)
-    db.session.commit()
+        title = request.form['title']
+        description = request.form['description']
+        new_todo = Todo(title = 'First todo', description = "Invest in Python company")
+        db.session.add(new_todo)
+        db.session.commit()
     allTodo = Todo.query.all()
     print(allTodo)
     return render_template("index.html", allTodo = allTodo)
