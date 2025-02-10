@@ -61,44 +61,37 @@
         <div class="mb-3">
             <label for="title" class="form-label">Todo Title</label>
             <input type="text" class="form-control" id="title">
-          </div>
-          <div class="mb-3">
+        </div>
+        <div class="mb-3">
             <label for="desc" class="form-label">Todo Description</label>
             <textarea class="form-control" id="desc" rows="3"></textarea>
-          </div>
+        </div>
     </div>
 
     <div class="container my-4">
         <h1>Todos</h1>
         <table class="table">
             <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Date_Created</th>
-              </tr>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date_Created</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+                {% for Todo in allTodo %}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.description}}</td>
+                    <td>{{todo.date_created}}</td>
+                </tr>
+                {% endfor %}
+
+
             </tbody>
-          </table>
+        </table>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
