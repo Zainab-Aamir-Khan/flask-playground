@@ -67,7 +67,7 @@
                 <label for="desc" class="form-label">Todo Description</label>
                 <textarea class="form-control" name="description" id="desc" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-success btn-primary">Submit</button>
         </form>
     </div>
 
@@ -90,12 +90,10 @@
                     <td>{{todo.title}}</td>
                     <td>{{todo.description}}</td>
                     <td>{{todo.date_created}}</td>
-                    <td><a href="/done/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-1">Done</button></td>
-                    <td><a href="/done/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-2">Update</button></td>
-
+                    <td><a href="/update/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-1">Upadte</a>
+                    <a href="/delete/{{todo.id}}" type="button" class="btn btn-success btn-sm mx-1">Delete</a></td>
                 </tr>
                 {% endfor %}
-
             </tbody>
         </table>
     </div>
