@@ -17,12 +17,10 @@ class Todo(db.Model):
         return f"{self.id} - {self.title}"
     
 
-@app.route("/") 
-def hello_world():
-    return "<p>Hello, World!</p>"
 
-@app.route("/about", methods =["GET", "POST"])
-def about():
+
+@app.route("/", methods =["GET", "POST"])
+def home():
     if request.method == "POST":
         title = request.form['title']
         description = request.form['description']
